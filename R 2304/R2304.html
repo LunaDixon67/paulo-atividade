@@ -3,19 +3,78 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Exemplo de Tabela com COLSPAN</title>
+    <title>Exemplo de Tabela com COLSPAN - Tema Sobrenatural</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Verdana', sans-serif;
+            background-image: url('https://i.imgur.com/7D1dzFu.jpg'); /* imagem temática */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #f2f2f2;
+            text-shadow: 1px 1px 3px #000;
+        }
+
+        table {
+            background-color: rgba(0, 0, 0, 0.8);
+            border-collapse: collapse;
+            margin-top: 40px;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+        }
+
+        td {
+            padding: 15px;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        h1 {
+            color: #ff0000;
+            text-shadow: 2px 2px 5px black;
+        }
+
+        p {
+            color: #cccccc;
+            font-size: 16px;
+        }
+
+        button {
+            width: 180px;
+            height: 60px;
+            background-color: #222;
+            color: #f2f2f2;
+            border: 2px solid #ff0000;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 0 10px #ff0000;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ff0000;
+            color: #000;
+            box-shadow: 0 0 15px #ff0000;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
     <table border="1" width="80%" align="center">
         <tr>
             <td>
-                <center><h1><font face="verdana">COLSPAN</font></h1></center>
-                <center><p><font face="'verdana">
+                <center><h1>COLSPAN</h1></center>
+                <center><p>
                     Este atributo define quantas colunas uma célula pode abranger. Por padrão, na maioria dos navegadores de internet cada célula adicionada em uma tabela corresponde a uma coluna. Pode ser aplicada no td.
-                </font></p></center>
+                </p></center>
             </td>
         </tr>
     </table>
+
     <table border="1" width="80%" align="center">
         <tr>
             <td width="20%">1</td>
@@ -25,18 +84,17 @@
             <td width="20%">5</td>
         </tr>
         <tr>
-            <td width="60%" colspan="3" align="center">célula com 3 colunas</td>
+            <td width="60%" colspan="3">célula com 3 colunas</td>
             <td width="20%">4</td>
             <td width="20%">5</td>
         </tr>
     </table>
+
     <br><br><br>
     <center>
-    <a href="../index.html">
-            <button style=" width: 140px; height: 60px; background-color: #D3D3D3;">Clique aqui para voltar
-        </button>
-    </a>
+        <a href="../index.html">
+            <button>Clique aqui para voltar</button>
+        </a>
     </center>
-
 </body>
 </html>
