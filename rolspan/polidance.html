@@ -1,22 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Exemplo de ROWSPAN</title>
+    <title>Exemplo de ROWSPAN - Tema Sobrenatural</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Verdana', sans-serif;
+            background-image: url('castelo2.jpg'); /* Imagem sobrenatural */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #f2f2f2;
+            text-shadow: 1px 1px 3px #000;
+        }
+
+        table {
+            background-color: rgba(0, 0, 0, 0.8);
+            border-collapse: collapse;
+            margin-top: 40px;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+        }
+
+        td {
+            padding: 15px;
+            text-align: center;
+            font-size: 16px;
+            color: #f2f2f2;
+        }
+
+        h1 {
+            color: #ff0000;
+            text-shadow: 2px 2px 5px black;
+        }
+
+        p {
+            color: #cccccc;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        button {
+            width: 180px;
+            height: 60px;
+            background-color: #222;
+            color: #f2f2f2;
+            border: 2px solid #ff0000;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 0 10px #ff0000;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ff0000;
+            color: #000;
+            box-shadow: 0 0 15px #ff0000;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
     <table border="1" width="80%" align="center">
         <tr>
             <td>
-                <center><h1><font face="verdana">ROWSPAN</font></h1></center>
+                <center><h1>ROWSPAN</h1></center>
                 <p>
-                    <font face="verdana">
                     Define quantas linhas uma mesma célula pode abranger. 
                     Por padrão, na maioria dos navegadores de internet 
                     cada célula adicionada em uma tabela corresponde a 
                     uma linha. Pode ser aplicado no td.
-                </font>
                 </p>
             </td>
         </tr>
@@ -51,12 +109,12 @@
             <td width="20%">5</td>
         </tr>
     </table>
+
     <br><br><br>
     <center>
-    <a href="../index.html">
-            <button style=" width: 140px; height: 60px; background-color: #D3D3D3;">Clique aqui para voltar
-        </button>
-    </a>
+        <a href="../index.html">
+            <button>Clique aqui para voltar</button>
+        </a>
     </center>
 </body>
 </html>
