@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rowspan e Colspan Juntos - Tema Sobrenatural</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Verdana', sans-serif;
+      background-image: url('castelo2.jpg'); /* coloque sua imagem sobrenatural aqui */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #f2f2f2;
+      text-shadow: 1px 1px 3px #000;
+    }
+
+    h1 {
+      color: #ff0000;
+      text-shadow: 2px 2px 5px black;
+      text-align: center;
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+
+    table {
+      background-color: rgba(0, 0, 0, 0.85);
+      border-collapse: collapse;
+      margin: 20px auto;
+      width: 80%;
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+      border: 2px solid #ff0000;
+    }
+
+    td {
+      padding: 12px;
+      text-align: center;
+      font-size: 16px;
+      color: #f2f2f2;
+      border: 1px solid #ff0000;
+      font-family: 'Verdana', sans-serif;
+    }
+
+    button {
+      width: 180px;
+      height: 60px;
+      background-color: #222;
+      color: #f2f2f2;
+      border: 2px solid #ff0000;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 0 10px #ff0000;
+      transition: all 0.3s ease;
+      margin: 40px auto;
+      display: block;
+    }
+
+    button:hover {
+      background-color: #ff0000;
+      color: #000;
+      box-shadow: 0 0 15px #ff0000;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Utilização de Rowspan com Colspan</h1>
+
+  <table cellpadding="2" cellspacing="0">
+    <tr>
+      <td colspan="5">1, 2, 3, 4, 5</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td rowspan="3">1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+    </tr>
+  </table>
+
+  <table cellpadding="2" cellspacing="0">
+    <tr>
+      <td>1</td>
+      <td colspan="2">2,3</td>
+      <td colspan="2">4,5</td>
+    </tr>
+    <tr>
+      <td rowspan="2" valign="top">1</td>
+      <td>2</td>
+      <td>3</td>
+      <td rowspan="2" valign="bottom">4</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td rowspan="2" valign="top">3</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>4</td>
+      <td rowspan="2" valign="bottom">5</td>
+    </tr>
+    <tr>
+      <td colspan="2">1,2</td>
+      <td colspan="2">3,5</td>
+    </tr>
+  </table>
+
+  <a href="index.html">
+    <button>Clique aqui para voltar</button>
+  </a>
+
+</body>
+</html>
