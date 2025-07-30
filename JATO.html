@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aeronáutica Brasileira</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #ffffff;
+      color: #1b1b1b;
+    }
+
+    nav {
+      background-color: #0c2340;
+      color: white;
+      padding: 20px 40px;
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav h1 {
+      font-size: 1.5rem;
+      color: #66fcf1;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #66fcf1;
+    }
+
+    section {
+      padding: 100px 40px 60px;
+    }
+
+    .hero {
+      background: linear-gradient(90deg, #0c2340, #1f2833);
+      color: white;
+      text-align: center;
+      padding-top: 160px;
+      padding-bottom: 140px;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .section-light {
+      background-color: #f5f5f5;
+    }
+
+    .section-dark {
+      background-color: #1f2833;
+      color: #fff;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background-color: #ffffff;
+      color: #000;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+    }
+
+    .section-dark .card {
+      background-color: #293642;
+      color: #fff;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #45a29e;
+    }
+
+    footer {
+      background-color: #0c2340;
+      color: #fff;
+      text-align: center;
+      padding: 25px;
+      margin-top: 40px;
+    }
+
+    .audio-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 30px;
+      background-color: #45a29e;
+      color: #fff;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .audio-btn:hover {
+      background-color: #66fcf1;
+      color: #0c2340;
+    }
+
+    /* Botão voltar */
+    .btn-voltar {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #45a29e;
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(69, 162, 158, 0.6);
+      transition: background-color 0.3s ease;
+      z-index: 1100;
+      user-select: none;
+      font-size: 1rem;
+    }
+
+    .btn-voltar:hover {
+      background-color: #66fcf1;
+      color: #0c2340;
+      box-shadow: 0 6px 12px rgba(102, 252, 241, 0.8);
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+      }
+
+      .hero h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <h1>Aeronáutica</h1>
+    <ul>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#atribuicoes">Atribuições</a></li>
+      <li><a href="#formacao">Formação</a></li>
+      <li><a href="#historia">História</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <h2>Força Aérea Brasileira</h2>
+    <p>Defendendo os céus do Brasil com tecnologia, coragem e compromisso com a soberania nacional.</p>
+    <button class="audio-btn" onclick="lerAeronautica()">🔊 Ouvir Introdução</button>
+  </section>
+
+  <section class="section-light" id="sobre">
+    <div class="content-grid">
+      <div class="card">
+        <h3>📌 O que é a Aeronáutica?</h3>
+        <p>A Aeronáutica Brasileira é a força responsável pela defesa do espaço aéreo nacional, integrando tecnologia avançada e profissionais dedicados.</p>
+      </div>
+      <div class="card">
+        <h3>🎯 Missão</h3>
+        <p>Garantir a soberania do espaço aéreo e apoiar a defesa nacional com excelência e ética.</p>
+      </div>
+      <div class="card">
+        <h3>🌍 Atuação Global</h3>
+        <p>Atua no controle do espaço aéreo, operações de resgate, transporte estratégico e cooperação internacional.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-dark" id="atribuicoes">
+    <div class="content-grid">
+      <div class="card">
+        <h3>🛡 Defesa Aérea</h3>
+        <p>Monitoramento e proteção do espaço aéreo brasileiro contra ameaças externas e internas.</p>
+      </div>
+      <div class="card">
+        <h3>🚑 Resgate e Ajuda Humanitária</h3>
+        <p>Missões de salvamento e apoio em desastres naturais e emergências.</p>
+      </div>
+      <div class="card">
+        <h3>🛩 Transporte Estratégico</h3>
+        <p>Transporte aéreo de autoridades, tropas e equipamentos essenciais para a defesa e segurança.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-light" id="formacao">
+    <div class="content-grid">
+      <div class="card">
+        <h3>👨‍✈️ Formação Militar</h3>
+        <p>Treinamento físico, técnico e estratégico para oficiais e sargentos em escolas especializadas.</p>
+      </div>
+      <div class="card">
+        <h3>📋 Processo Seletivo</h3>
+        <p>Provas teóricas, testes físicos, exames médicos e avaliações psicológicas rigorosas.</p>
+      </div>
+      <div class="card">
+        <h3>🎓 Carreira</h3>
+        <p>Desenvolvimento profissional com oportunidades de especialização e crescimento.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-dark" id="historia">
+    <div class="content-grid">
+      <div class="card">
+        <h3>📚 Fundação</h3>
+        <p>Criada em 1941, a Aeronáutica unificou as forças aéreas do Exército e da Marinha do Brasil.</p>
+      </div>
+      <div class="card">
+        <h3>🏛️ Evolução</h3>
+        <p>Participou da Segunda Guerra Mundial e evoluiu para uma força aérea moderna e tecnológica.</p>
+      </div>
+      <div class="card">
+        <h3>🗂️ Missões</h3>
+        <p>Atua em defesa, paz, cooperação internacional e ações humanitárias.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    2025 Aeronáutica Brasileira - Todos os direitos reservados.
+  </footer>
+
+  <button class="btn-voltar" onclick="window.location.href='planoaeb.html'">⬅ Voltar à Página Inicial</button>
+
+  <script>
+    function lerAeronautica() {
+      const texto = `
+        Aeronáutica Brasileira. Força responsável pela defesa do espaço aéreo nacional.
+        Missão: garantir soberania e apoiar a defesa com ética e excelência.
+        Atuação: controle aéreo, resgate, transporte e cooperação internacional.
+        Formação: treinamento rigoroso e processo seletivo exigente.
+        História: fundada em 1941, participou da Segunda Guerra Mundial e evoluiu tecnicamente.
+      `;
+      const fala = new SpeechSynthesisUtterance(texto);
+      fala.lang = 'pt-BR';
+      fala.rate = 1;
+      window.speechSynthesis.cancel();
+      window.speechSynthesis.speak(fala);
+    }
+  </script>
+
+</body>
+</html>

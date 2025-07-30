@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FBI - Agência Federal</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #ffffff;
+      color: #1b1b1b;
+    }
+
+    nav {
+      background-color: #0c2340;
+      color: white;
+      padding: 20px 40px;
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav h1 {
+      font-size: 1.5rem;
+      color: #66fcf1;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #66fcf1;
+    }
+
+    section {
+      padding: 100px 40px 60px;
+    }
+
+    .hero {
+      background: linear-gradient(90deg, #0c2340, #1f2833);
+      color: white;
+      text-align: center;
+      padding-top: 160px;
+      padding-bottom: 140px;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .section-light {
+      background-color: #f5f5f5;
+    }
+
+    .section-dark {
+      background-color: #1f2833;
+      color: #fff;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background-color: #ffffff;
+      color: #000;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+    }
+
+    .section-dark .card {
+      background-color: #293642;
+      color: #fff;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #45a29e;
+    }
+
+    footer {
+      background-color: #0c2340;
+      color: #fff;
+      text-align: center;
+      padding: 25px;
+      margin-top: 40px;
+    }
+
+    .audio-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 30px;
+      background-color: #45a29e;
+      color: #fff;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .audio-btn:hover {
+      background-color: #66fcf1;
+      color: #0c2340;
+    }
+
+    /* Botão voltar */
+    .btn-voltar {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #45a29e;
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(69, 162, 158, 0.6);
+      transition: background-color 0.3s ease;
+      z-index: 1100;
+      user-select: none;
+      font-size: 1rem;
+    }
+
+    .btn-voltar:hover {
+      background-color: #66fcf1;
+      color: #0c2340;
+      box-shadow: 0 6px 12px rgba(102, 252, 241, 0.8);
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+      }
+
+      .hero h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <h1>FBI</h1>
+    <ul>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#atribuicoes">Atribuições</a></li>
+      <li><a href="#agentes">Agentes</a></li>
+      <li><a href="#historia">História</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <h2>Federal Bureau of Investigation</h2>
+    <p>Excelência em segurança, investigação e defesa nacional dos Estados Unidos. Atuando contra o terrorismo, o crime e as ameaças modernas.</p>
+    <button class="audio-btn" onclick="lerFBI()">🔊 Ouvir Introdução</button>
+  </section>
+
+  <section class="section-light" id="sobre">
+    <div class="content-grid">
+      <div class="card">
+        <h3>📌 O que é o FBI?</h3>
+        <p>O FBI é a principal agência investigativa do Departamento de Justiça dos EUA. Atua em crimes federais, espionagem, terrorismo, e segurança nacional.</p>
+      </div>
+      <div class="card">
+        <h3>🎯 Missão</h3>
+        <p>Proteger e defender os Estados Unidos com integridade, respeito à lei, responsabilidade e coragem.</p>
+      </div>
+      <div class="card">
+        <h3>🌍 Atuação Global</h3>
+        <p>O FBI coopera com forças de segurança do mundo todo em operações contra o crime internacional, tráfico, e ameaças cibernéticas.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-dark" id="atribuicoes">
+    <div class="content-grid">
+      <div class="card">
+        <h3>🕵️‍♂️ Investigação Federal</h3>
+        <p>Combate a corrupção, crimes organizados, tráfico humano, lavagem de dinheiro e crimes cibernéticos.</p>
+      </div>
+      <div class="card">
+        <h3>🚨 Contra-Terrorismo</h3>
+        <p>Previne e responde a ameaças terroristas internas e externas com unidades de inteligência e táticas.</p>
+      </div>
+      <div class="card">
+        <h3>🔒 Contrainteligência</h3>
+        <p>Protege os EUA contra espionagem e operações de influência estrangeiras.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-light" id="agentes">
+    <div class="content-grid">
+      <div class="card">
+        <h3>🧑‍💼 Perfil do Agente</h3>
+        <p>Agentes são treinados intensamente, possuem formação superior e atuam com foco, ética e resistência sob pressão.</p>
+      </div>
+      <div class="card">
+        <h3>📋 Requisitos</h3>
+        <p>Ser cidadão americano, possuir diploma universitário, aptidão física e mental, e histórico limpo.</p>
+      </div>
+      <div class="card">
+        <h3>🎓 Treinamento</h3>
+        <p>Realizado em Quantico, Virgínia, com foco em técnicas de investigação, armamento, combate e inteligência.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-dark" id="historia">
+    <div class="content-grid">
+      <div class="card">
+        <h3>📚 Fundação</h3>
+        <p>Criado em 1908, inicialmente como Bureau of Investigation. Tornou-se "FBI" em 1935.</p>
+      </div>
+      <div class="card">
+        <h3>🏛️ Evolução</h3>
+        <p>Desde a era Hoover até os dias atuais, o FBI modernizou-se com tecnologia e estratégias avançadas.</p>
+      </div>
+      <div class="card">
+        <h3>🗂️ Casos Famosos</h3>
+        <p>Participação em casos como Al Capone, Guerra contra o Terror, e investigação de crimes cibernéticos globais.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+  2025 FBI (Federal Bureau de Investigation)
+  </footer>
+
+  <button class="btn-voltar" onclick="window.location.href='planoaeb.html'">⬅ Voltar à Página Inicial</button>
+
+  <script>
+    function lerFBI() {
+      const texto = `
+        FBI. Federal Bureau of Investigation. Agência investigativa dos Estados Unidos.
+        Atua contra o terrorismo, espionagem, crimes cibernéticos, tráfico e corrupção.
+        Trabalha com ética, inteligência e poder tático para proteger o país e seus cidadãos.
+      `;
+      const fala = new SpeechSynthesisUtterance(texto);
+      fala.lang = 'pt-BR';
+      fala.rate = 1;
+      window.speechSynthesis.cancel();
+      window.speechSynthesis.speak(fala);
+    }
+  </script>
+
+</body>
+</html>

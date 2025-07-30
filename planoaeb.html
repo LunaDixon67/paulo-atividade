@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>FBI & Aeronáutica - Fundo Preenchido Sem Espaço</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #0d0d0d url('castelo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #f2f2f2;
+    text-shadow: 1px 1px 3px #000;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0,0,0,0.85);
+    z-index: 0;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 30px 25px 30px 25px;
+    border-radius: 8px;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+  }
+
+  header {
+    text-align: center;
+    margin: 0 0 30px 0;
+    padding-top: 0;
+  }
+
+  header h1 {
+    font-family: 'Georgia', serif;
+    font-size: 3rem;
+    color: #ff0000;
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px #ff0000;
+    margin: 0 0 6px 0;
+  }
+
+  main {
+    display: flex;
+    gap: 40px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 100%;
+    flex-grow: 1;
+  }
+
+  article {
+    background-color: #1a1a1a;
+    border: 2px solid #550000;
+    border-radius: 8px;
+    box-shadow: 0 0 16px rgba(255, 0, 0, 0.6);
+    width: 47%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  article:hover {
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.9);
+    transform: translateY(-8px);
+  }
+
+  article img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-bottom: 2px solid #550000;
+    filter: drop-shadow(0 0 8px #ff0000cc);
+    transition: transform 0.4s ease;
+  }
+
+  article:hover img {
+    transform: scale(1.07);
+  }
+
+  .content {
+    padding: 28px 30px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .content h2 {
+    font-family: 'Georgia', serif;
+    font-size: 2.2rem;
+    color: #ff0000;
+    text-shadow: 0 0 10px #ff3333;
+    margin-bottom: 14px;
+  }
+
+  .content p {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: #f2f2f2cc;
+    margin-bottom: 0;
+  }
+
+  .btn-voltar {
+    margin-top: 30px;
+    padding: 12px 28px;
+    background-color: #1a1a1a;
+    border: 2px solid #550000;
+    border-radius: 8px;
+    color: #ff0000;
+    font-family: 'Georgia', serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 16px rgba(255, 0, 0, 0.6);
+    text-shadow: 0 0 8px #ff0000;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    user-select: none;
+  }
+
+  .btn-voltar:hover {
+    background-color: #550000;
+    color: #fff2f2;
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.9);
+  }
+
+  footer {
+    padding-top: 20px;
+    border-top: 2px solid #330000;
+    width: 100%;
+    max-width: 960px;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #999;
+    text-shadow: 0 0 5px #220000;
+    font-style: italic;
+    margin: 0;
+  }
+
+  @media (max-width: 760px) {
+    main {
+      flex-direction: column;
+      gap: 25px;
+      align-items: center;
+    }
+
+    article {
+      width: 100%;
+    }
+
+    article img {
+      height: 260px;
+    }
+
+    .content h2 {
+      font-size: 1.8rem;
+    }
+
+    .content p {
+      font-size: 1rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <div class="overlay"></div>
+
+  <div class="container">
+    <header>
+      <h1>FBI & Aeronáutica</h1>
+    </header>
+
+    <main>
+      <article onclick="location.href='FBI.html'" role="link" tabindex="0">
+        <img src="fbi.avif" alt="Logo e Viatura do FBI" />
+        <div class="content">
+          <h2>Federal Bureau of Investigation</h2>
+          <p>Agência nacional de investigação dos EUA, responsável por crimes federais e segurança interna.</p>
+        </div>
+      </article>
+
+      <article onclick="location.href='JATO.html'" role="link" tabindex="0">
+        <img src="porta1.jpg" alt="Avião da Aeronáutica" />
+        <div class="content">
+          <h2>Aeronáutica</h2>
+          <p>Defesa do espaço aéreo nacional com tecnologia avançada e profissionais qualificados.</p>
+        </div>
+      </article>
+    </main>
+
+    <button class="btn-voltar" onclick="window.location.href='index.html'">⬅ Voltar ao Início</button>
+
+  </div>
+</body>
+</html>
